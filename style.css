@@ -1,0 +1,55 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*,*::before,*::after{box-sizing:border-box}*{margin:0}html,body{height:100%}body{line-height:1.5;-webkit-font-smoothing:antialiased}img,picture,video,canvas,svg{display:block;max-width:100%}input,button,textarea,select{font:inherit}p,h1,h2,h3,h4,h5,h6{overflow-wrap:break-word}#root,#__next{isolation:isolate}
+* {
+  padding: 0;
+}
+li {
+  list-style-type: none;
+}
+/* ====================================================
+  カルーセル
+====================================================*/
+.scroll {
+  position: relative;
+  width: 1000px;
+  margin: 0 auto 30px;
+}
+.scroll-list-wrap {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+  width: 650px;
+  margin: 0 auto;
+}
+.scroll-list {
+  display: flex;
+}
+.scroll-list li {
+  flex: none;
+  width: 217px;
+}
+.scroll-nav {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: block;
+  margin: auto 0;
+  background-size: 10px auto;
+  z-index: 1;
+}
+.scroll-nav.disabled {
+  opacity: 0.7;
+  cursor: default;
+  color: #aaa;
+  text-decoration: none;
+}
+.scroll-nav--prev {
+  left: 4px;
+}
+.scroll-nav--next {
+  right: 0px;
+}
